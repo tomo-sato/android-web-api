@@ -19,6 +19,8 @@ package jp.dcworks.sample.android_web_api;
 import android.app.Application;
 import android.content.Context;
 
+import com.raizlabs.android.dbflow.config.FlowManager;
+
 /**
  * アプリケーションクラス.
  *
@@ -41,6 +43,9 @@ public class AndroidWebApiApp extends Application {
         super.onCreate();
 
         this.appContext = getApplicationContext();
+
+        // DBFlow
+        FlowManager.init(this);
     }
 
     /**
